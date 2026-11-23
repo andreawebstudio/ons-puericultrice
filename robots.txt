@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Aggiornare se si collega un dominio personalizzato
+Sitemap: https://ons-puericultrice.vercel.app/sitemap.xml
