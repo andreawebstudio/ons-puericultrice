@@ -384,6 +384,7 @@ h3 {
 }
 .about-head { grid-area: head; }
 .about-photo { grid-area: photo; margin: 0; justify-self: center; width: 100%; max-width: 280px; }
+@media (min-width: 821px) { .about-photo { align-self: start; margin-top: clamp(24px, 3vw, 44px); } }
 .about-text { grid-area: text; }
 
 .photo-placeholder {
@@ -550,7 +551,7 @@ html:not(.js) .draw { stroke-dashoffset: 0; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: 1fr;
   gap: clamp(22px, 2.6vw, 34px);
-  max-width: 1120px; margin-inline: auto;
+  max-width: 900px; margin-inline: auto;
 }
 .service {
   display: flex; flex-direction: column;
@@ -565,13 +566,13 @@ html:not(.js) .draw { stroke-dashoffset: 0; }
 .service:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
 .service img {
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   background: var(--beige);
   transition: transform 1.2s var(--ease);
 }
 .service:hover img { transform: scale(1.03); }
-.service-body { padding: clamp(26px, 3vw, 38px); flex: 1; position: relative; background: var(--white); }
+.service-body { padding: clamp(22px, 2.4vw, 28px); flex: 1; position: relative; background: var(--white); }
 .service h3 { margin-bottom: 12px; }
 .service-body > p { color: var(--text-soft); }
 
@@ -580,7 +581,7 @@ html:not(.js) .draw { stroke-dashoffset: 0; }
   border-top: 1px solid var(--line);
   display: grid; gap: 8px;
 }
-.topics li { position: relative; padding-left: 22px; font-size: 15.5px; }
+.topics li { position: relative; padding-left: 22px; font-size: 15px; }
 .topics li::before {
   content: ""; position: absolute; left: 0; top: .78em;
   width: 11px; height: 1px; background: var(--accent);
@@ -746,14 +747,14 @@ html:not(.js) .faq-a { grid-template-rows: 1fr; }
    CONTATTI — solo form centrale
    ========================================================= */
 .contact-form {
-  max-width: 640px;
+  max-width: 520px;
   margin-inline: auto;
   background: var(--white);
   border-radius: var(--radius);
   border: 1px solid var(--line-soft);
   box-shadow: var(--shadow);
-  padding: clamp(24px, 3.4vw, 40px);
-  display: grid; gap: 18px;
+  padding: clamp(22px, 2.8vw, 30px);
+  display: grid; gap: 14px;
 }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .field { display: grid; gap: 6px; align-content: start; }
@@ -769,7 +770,7 @@ html:not(.js) .faq-a { grid-template-rows: 1fr; }
   min-height: 48px;
   transition: border-color .25s, box-shadow .25s;
 }
-.field textarea { resize: vertical; min-height: 116px; }
+.field textarea { resize: vertical; min-height: 96px; }
 .field select {
   appearance: none; -webkit-appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2346372F' stroke-width='1.4'/%3E%3C/svg%3E");
